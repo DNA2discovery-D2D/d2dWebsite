@@ -3,9 +3,8 @@ name: Deploy Angular to GitHub Pages
 on:
   push:
     branches:
-      - main  # Change this if your default branch is different
-      - DNA2discovery-D2D-patch-1
-      
+      - main  # Default branch
+      - DNA2discovery-D2D-patch-1  # Additional branch to trigger deployment
 
 jobs:
   build-deploy:
@@ -18,22 +17,20 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 18
-          
+          node-version: 20  # Use Node 20 for better compatibility
+
       - name: Install Angular CLI
         run: npm install -g @angular/cli
-        
+
       - name: Install Dependencies
         run: npm install --legacy-peer-deps
-        
+
       - name: Build Angular App
-        run: |
-            ng build --configuration production --output-path dist  --base-href "/d2dWebsite/"
-            npx angular-cli-ghpages --dir=dist
-          
+        run: ng build --configuration production --output-path dist --base-href "/d2dWebsite/"
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          branch: gh-pages
-          folder: docs
+          branch: gh-pages  # Deployment branch
+          folder: dist  # Use the correct build output folder
+          clean: true  # Ensures old files are removed before deploying
