@@ -25,9 +25,12 @@ jobs:
         
       - name: Install Dependencies
         run: npm install --legacy-peer-deps
-
+        
       - name: Build Angular App
-        run: ng build --output-path docs --base-href "/d2dWebsite/"
+        run: |
+            ng build --configuration production --output-path dist  --base-href "/d2dWebsite/"
+            npx angular-cli-ghpages --dir=dist
+          
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
