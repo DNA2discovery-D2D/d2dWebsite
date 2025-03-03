@@ -27,7 +27,7 @@ jobs:
         run: npm install --legacy-peer-deps
 
       - name: Build Angular App
-        run: ng build --output-path docs --base-href "/d2dWebsite/"
+        run: ng build --output-path docs --base-href "/d2dWebsite-1.0.0/"
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
