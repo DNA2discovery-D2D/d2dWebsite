@@ -18,15 +18,21 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20  # Use Node 20 for better compatibility
+          cache: 'npm'  # Added caching for faster builds
 
       - name: Install Angular CLI
         run: npm install -g @angular/cli
 
       - name: Install Dependencies
-        run: npm install --legacy-peer-deps
+        run: npm ci --legacy-peer-deps  # Using npm ci for more reliable installs
 
       - name: Build Angular App
-        run: ng build --configuration production --output-path dist/d2dWebsite
+        run: npm run build -- --configuration production --base-href="/"
+        # Using npm run build is more reliable than directly calling ng
+
+      - name: Create 404.html for SPA routing
+        run: cp dist/d2dWebsite/index.html dist/d2dWebsite/404.html
+        # Ensures Angular routing works properly on GitHub Pages
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
