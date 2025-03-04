@@ -27,7 +27,7 @@ jobs:
         run: npm ci --legacy-peer-deps  # Using npm ci for more reliable installs
 
       - name: Build Angular App
-        run: npm run build -- --configuration production --base-href="/"
+        run: npm run build -- --configuration=production --base-href="/"
         # Using npm run build is more reliable than directly calling ng
 
       - name: Create 404.html for SPA routing
@@ -38,5 +38,3 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: gh-pages  # Deployment branch
-          folder: dist/d2dWebsite  # Use the correct build output folder
-          clean: true  # Ensures old files are removed before deploying
