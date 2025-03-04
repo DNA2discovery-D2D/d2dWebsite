@@ -23,4 +23,4 @@ export default `<!DOCTYPE html><html lang="en" data-beasties-container><head><li
 
 <script src="./polyfills-FFHMD2TL.js" type="module"></script><script src="./main-6DPTGFD4.js" type="module"></script>
 
-<script id="ng-state" type="application/json">{"__nghData__":[{"t":{"0":"t0","1":"t1"},"c":{"0":[],"1":[{"i":"t1","r":1,"t":{"16":"t2","22":"t3","27":"t4","28":"t5"},"c":{"16":[],"22":[],"27":[],"28":[]}}]}},{},{"t":{"81":"t11"},"c":{"81":[{"i":"t11","r":1,"x":3}]}},{"c":{"2":[{"i":"c257857409","r":1}]}}]}</script></body></html>`;
+<script id="ng-state" type="application/json">{"__nghData__":[{"t":{"0":"t0","1":"t1"},"c":{"0":[],"1":[{"i":"t1","r":1,"t":{"16":"t2","22":"t3","27":"t4","28":"t5"},"c":{"16":[],"22":[],"27":[],"28":[]}}]}},{},{"t":{"81":"t12"},"c":{"81":[{"i":"t12","r":1,"x":3}]}},{"c":{"2":[{"i":"c257857409","r":1}]}}]}</script></body></html>`;
