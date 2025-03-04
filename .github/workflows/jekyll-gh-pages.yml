@@ -35,5 +35,5 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: gh-pages  # Deployment branch
-          folder: dist/d2dWebsite  # Use the correct build output folder
+          folder: dist/d2dWebsite/browser  # Use the correct build output folder
           clean: true  # Ensures old files are removed before deploying
