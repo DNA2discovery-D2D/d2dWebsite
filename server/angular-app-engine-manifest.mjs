@@ -1,6 +1,6 @@
 
 export default {
-  basePath: '/d2dWebsite',
+  basePath: '/d2dWebsite-1.0.0',
   supportedLocales: {
   "en-US": ""
 },

@@ -1,10 +1,10 @@
 {
   "routes": {
-    "/d2dWebsite": {},
-    "/d2dWebsite/aboutus": {},
-    "/d2dWebsite/home": {},
-    "/d2dWebsite/resource": {},
-    "/d2dWebsite/resources": {},
-    "/d2dWebsite/services": {}
+    "/d2dWebsite-1.0.0": {},
+    "/d2dWebsite-1.0.0/aboutus": {},
+    "/d2dWebsite-1.0.0/home": {},
+    "/d2dWebsite-1.0.0/resource": {},
+    "/d2dWebsite-1.0.0/resources": {},
+    "/d2dWebsite-1.0.0/services": {}
   }
 }
