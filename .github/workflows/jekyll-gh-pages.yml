@@ -28,7 +28,7 @@ jobs:
 
       - name: Build Angular App
         run: |
-          ng build --configuration production --base-href "/d2dWebsite-1.0.0/" --output-path dist/d2dWebsite
+          ng build --configuration production --base-href "/d2dWebsite/" --output-path dist/d2dWebsite
         # Using npm run build is more reliable than directly calling ng
 
       - name: Deploy to GitHub Pages
