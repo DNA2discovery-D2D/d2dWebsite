@@ -26,11 +26,11 @@ jobs:
         run: npm install --legacy-peer-deps
 
       - name: Build Angular App
-        run: ng build --configuration production --output-path dist --base-href "/d2dWebsite/"
+        run: ng build --configuration production --output-path dist/d2dWebsite --base-href "/d2dWebsite/"
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: gh-pages  # Deployment branch
-          folder: dist  # Use the correct build output folder
+          folder: dist/d2dWebsite  # Use the correct build output folder
           clean: true  # Ensures old files are removed before deploying
