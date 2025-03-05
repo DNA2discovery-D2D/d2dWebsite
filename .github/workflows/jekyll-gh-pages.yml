@@ -29,7 +29,8 @@ jobs:
       - name: Build Angular App
         run: |
           ng build --configuration production --base-href "/d2dWebsite/" --output-path dist/d2dWebsite
-        # Using npm run build is more reliable than directly calling ng
+          cp src/shared/404.html dist/d2dwebsite-1.0.0/browser/
+          # Using npm run build is more reliable than directly calling ng
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
